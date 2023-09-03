@@ -1,8 +1,5 @@
-import Routing from './index.vue';
+import Routing from "./index.vue";
 
-export const routes = [
-    {path: '/', component: () => import('./tasks-list')},
-    {path: '/:id', component: () => import('./task-details')}
-];
+export const routes = [];
 
-export {Routing}
+export { Routing };

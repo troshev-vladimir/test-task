@@ -10,4 +10,12 @@ export default defineConfig({
 		tsconfigPaths(),
 		EnvironmentPlugin("all", { prefix: "VITE_" }),
 	],
+	resolve: {
+		alias: [
+			{
+				find: /^(.*)$/,
+				replacement: "node_modules/$1",
+			},
+		],
+	},
 });
