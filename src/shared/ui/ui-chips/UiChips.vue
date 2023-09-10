@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 	export interface Props {
-		clearable: boolean;
-		selectable: boolean;
+		clearable?: boolean;
+		selectable?: boolean;
 	}
 	const props = withDefaults(defineProps<Props>(), {
 		selectable: true,
@@ -33,7 +33,7 @@
 		display: flex;
 		align-items: center;
 		column-gap: 8px;
-		padding: 7px 12px; // Тут косяк в фигме
+		padding: 6px 12px;
 		display: inline-flex;
 		align-items: center;
 
@@ -41,7 +41,7 @@
 			color: var(--gray-5404144, #404144);
 			font-size: 14px;
 			font-weight: 400;
-			line-height: 16px;
+			line-height: 20px;
 			pointer-events: none;
 		}
 
@@ -56,6 +56,10 @@
 		.delete {
 			cursor: pointer;
 			height: 20px;
+
+			.text {
+				line-height: 16px;
+			}
 		}
 	}
 </style>

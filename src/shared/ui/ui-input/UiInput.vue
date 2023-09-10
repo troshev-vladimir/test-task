@@ -3,6 +3,7 @@
 		<input
 			v-model="localValue"
 			type="text"
+			:disabled="disabled"
 			class="native-input"
 			:class="{ active: isFilled }"
 		/>
@@ -16,8 +17,9 @@
 	export interface Props {
 		label: string;
 		modelValue: string | number;
+		disabled: boolean;
 	}
-	const props = withDefaults(defineProps<Props>(), {});
+	const props = withDefaults(defineProps<Props>(), { disabled: false });
 	const emit = defineEmits(["update:modelValue"]);
 
 	const localValue = computed({

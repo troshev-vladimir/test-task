@@ -1,7 +1,7 @@
-export type Tag = {
+export type Good = {
 	id: number;
 	name: string;
-	aliases: Array<string>;
+	categories: Category[];
 };
 
 export type Category = {
@@ -14,4 +14,10 @@ export type Subcategory = {
 	id: number;
 	name: string;
 	tags: Tag[];
+};
+
+export type Tag = {
+	id: number;
+	name: string;
+	aliases: Array<string>;
 };
