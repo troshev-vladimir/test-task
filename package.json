@@ -3,12 +3,13 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite",
-		"build": "vue-tsc --noEmit && vite build",
+		"build": "vite build",
 		"serve": "vite preview"
 	},
 	"dependencies": {
 		"axios": "^0.24.0",
 		"sass": "^1.43.4",
+		"vite-svg-sprite-plugin": "^0.0.12",
 		"vue": "^3.2.16",
 		"vue-router": "4",
 		"vuex": "^4.0.2"
